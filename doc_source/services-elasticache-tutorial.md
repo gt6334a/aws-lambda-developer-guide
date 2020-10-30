@@ -46,7 +46,7 @@ Create an ElastiCache cluster in your default VPC\.
 1. Run the following AWS CLI command to create a Memcached cluster\. 
 
    ```
-   $ aws elasticache create-cache-cluster --cache-cluster-id ClusterForLambdaTest --cache-node-type cache.t3.medium --engine memcached --num-cache-nodes 1 --security-group-ids sg-0123a1b123456c1de
+   $ aws elasticache create-cache-cluster --cache-cluster-id ClusterForLambdaTest --cache-node-type cache.t3.medium --engine memcached --num-cache-nodes 1 --security-group-ids sg-0123a1b123456c1de --cache-subnet-group-name my-subnet-group
    ```
 
    You can look up the default VPC security group in the VPC console under **Security Groups**\. Your example Lambda function will add and retrieve an item from this cluster\.
